@@ -13,6 +13,7 @@
 		6FF0F6392A14BC2300E41395 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6FF0F6382A14BC2300E41395 /* Preview Assets.xcassets */; };
 		6FF0F6432A14BC2300E41395 /* MelakaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FF0F6422A14BC2300E41395 /* MelakaTests.swift */; };
 		6FF0F65C2A14C84C00E41395 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6FF0F65B2A14C84C00E41395 /* LaunchScreen.storyboard */; };
+		CBD9DB2E2A15CC0A00770345 /* SomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD9DB2D2A15CC0A00770345 /* SomeModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +35,7 @@
 		6FF0F63E2A14BC2300E41395 /* MelakaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MelakaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6FF0F6422A14BC2300E41395 /* MelakaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MelakaTests.swift; sourceTree = "<group>"; };
 		6FF0F65B2A14C84C00E41395 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = ../../melaka/Melaka/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		CBD9DB2D2A15CC0A00770345 /* SomeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SomeModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +82,7 @@
 				6FF0F6352A14BC2300E41395 /* Assets.xcassets */,
 				6FF0F6372A14BC2300E41395 /* Preview Content */,
 				6FF0F65B2A14C84C00E41395 /* LaunchScreen.storyboard */,
+				CBD9DB2D2A15CC0A00770345 /* SomeModel.swift */,
 			);
 			path = Melaka;
 			sourceTree = "<group>";
@@ -202,6 +205,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6FF0F6342A14BC2100E41395 /* ContentView.swift in Sources */,
+				CBD9DB2E2A15CC0A00770345 /* SomeModel.swift in Sources */,
 				6FF0F6322A14BC2100E41395 /* MelakaApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -11,7 +11,6 @@ import XCTest
 final class MelakaTests: XCTestCase {
 
     func testExample() throws {
-        let x = 1
-        XCTAssertEqual(x, 1)
+        XCTAssertEqual(Melaka.SomeModel.xxx, 1)
     }
 }
