@@ -77,12 +77,12 @@
 		6FF0F6302A14BC2100E41395 /* Melaka */ = {
 			isa = PBXGroup;
 			children = (
-				6FF0F6312A14BC2100E41395 /* MelakaApp.swift */,
+				6FF0F65B2A14C84C00E41395 /* LaunchScreen.storyboard */,
 				6FF0F6332A14BC2100E41395 /* ContentView.swift */,
+				6FF0F6312A14BC2100E41395 /* MelakaApp.swift */,
+				CBD9DB2D2A15CC0A00770345 /* SomeModel.swift */,
 				6FF0F6352A14BC2300E41395 /* Assets.xcassets */,
 				6FF0F6372A14BC2300E41395 /* Preview Content */,
-				6FF0F65B2A14C84C00E41395 /* LaunchScreen.storyboard */,
-				CBD9DB2D2A15CC0A00770345 /* SomeModel.swift */,
 			);
 			path = Melaka;
 			sourceTree = "<group>";
@@ -110,6 +110,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6FF0F6522A14BC2300E41395 /* Build configuration list for PBXNativeTarget "Melaka" */;
 			buildPhases = (
+				CBD9DB2F2A1700C500770345 /* ShellScript */,
 				6FF0F62A2A14BC2100E41395 /* Sources */,
 				6FF0F62B2A14BC2100E41395 /* Frameworks */,
 				6FF0F62C2A14BC2100E41395 /* Resources */,
@@ -198,6 +199,27 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		CBD9DB2F2A1700C500770345 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nif [[ \"$(uname -m)\" == arm64 ]]; then\n    export PATH=\"/opt/homebrew/bin:$PATH\"\nfi\n\nif which swiftlint > /dev/null; then\n  swiftlint --fix && swiftlint\nelse\n  echo \"warning: SwiftLint not installed\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		6FF0F62A2A14BC2100E41395 /* Sources */ = {
@@ -358,8 +380,8 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -389,8 +411,8 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
