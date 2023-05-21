@@ -16,7 +16,7 @@
 default_platform(:ios)
 
 platform :ios do
-  desc "Unit Tests"
+  desc 'Unit Tests'
   lane :tests do
     scan(
       scheme: 'Melaka',
@@ -24,5 +24,29 @@ platform :ios do
       code_coverage: true,
       parallel_testing: false
     )
+  end
+
+  desc 'Deploy to Test Flight'
+  lane :deploy_to_test_flight do
+    api_key = app_store_connect_api_key(
+      key_id: ENV['ASC_KEY_ID'],
+      issure_id: ENV['ASC_ISSURE_ID'],
+      key_content: ENV['ASC_API_KEY']
+    )
+
+    build_number = app_store_connect_build_number(
+      api_key: api_key,
+      app_identifier: 'com.yukimaterrace.ios.melaka',
+      version: get_version_number,
+      initial_build_number: 1
+    )
+    increment_build_number(build_number: build_number)
+
+    build_app(
+      scheme: 'Melaka',
+      configuration: 'Debug'
+    )
+    
+    upload_to_test_flight(api_key: asc_api_key)
   end
 end
