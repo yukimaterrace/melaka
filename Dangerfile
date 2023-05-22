@@ -1,6 +1,7 @@
 def run_slather
   slather.configure('Melaka.xcodeproj', 'Melaka', options: {
     ignore_list: [
+      '**/*Tests.swift',
       '**/*View.swift'
     ],
     decimals: 2
