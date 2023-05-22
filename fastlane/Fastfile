@@ -37,7 +37,7 @@ platform :ios do
     build_number = app_store_build_number(
       api_key: api_key,
       app_identifier: 'com.yukimaterrace.ios.melaka',
-      version: get_version_number,
+      version: get_version_number(target: 'Melaka'),
       initial_build_number: 0,
       live: false
     )
