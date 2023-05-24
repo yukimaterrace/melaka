@@ -8,6 +8,6 @@
 import Foundation
 
 enum SomeModel {
-    
+
     static var xxx: Int = 1
 }
