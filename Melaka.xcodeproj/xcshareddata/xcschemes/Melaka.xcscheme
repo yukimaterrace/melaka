@@ -56,7 +56,7 @@
             parallelizable = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "CBD9DB602A1AF5A400770345"
+               BlueprintIdentifier = "CBC0505A2A1DA40100B736D1"
                BuildableName = "APITests.xctest"
                BlueprintName = "APITests"
                ReferencedContainer = "container:Melaka.xcodeproj">
