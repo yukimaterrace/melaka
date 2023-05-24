@@ -18,16 +18,16 @@ struct MockTargetRequestBody: Encodable {}
 class MockTarget: TargetProtocol {
     typealias Response = MockTargetResponse
     typealias RequestBody = MockTargetRequestBody
-    
+
     var method: Alamofire.HTTPMethod = .get
-    
+
     var path: String = "/api/login"
-    
-    var queries: [URLQueryItem]? = nil
-    
-    var headers: Alamofire.HTTPHeaders? = nil
-    
+
+    var queries: [URLQueryItem]?
+
+    var headers: Alamofire.HTTPHeaders?
+
     var requestBody: MockTargetRequestBody? = .init()
-    
+
     var responseType: MockTargetResponse.Type = MockTargetResponse.self
 }

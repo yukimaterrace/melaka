@@ -11,7 +11,7 @@ import Foundation
 public protocol TargetProtocol {
     associatedtype Response: Decodable
     associatedtype RequestBody: Encodable
-    
+
     var method: HTTPMethod { get }
     var path: String { get }
     var queries: [URLQueryItem]? { get }

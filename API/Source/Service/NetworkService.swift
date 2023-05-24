@@ -9,17 +9,17 @@ import Alamofire
 import Foundation
 
 public protocol NetworkServiceProtocol {
-    func request<T>(target: T) async throws -> T.Response where T : TargetProtocol
+    func request<T>(target: T) async throws -> T.Response where T: TargetProtocol
 }
 
 public class NetworkService: NetworkServiceProtocol {
     let baseUrl: URL
-    
+
     public init(baseUrl: URL) {
         self.baseUrl = baseUrl
     }
-    
-    public func request<T>(target: T) async throws -> T.Response where T : TargetProtocol {
+
+    public func request<T>(target: T) async throws -> T.Response where T: TargetProtocol {
         try await withCheckedThrowingContinuation { [unowned self] continuation in
             let urlRequest: URLRequest
             do {
@@ -28,8 +28,8 @@ public class NetworkService: NetworkServiceProtocol {
                 continuation.resume(throwing: error)
                 return
             }
-            
-            AF.request(urlRequest).responseData() {
+
+            AF.request(urlRequest).responseData {
                 switch $0.result {
                 case .success(let data):
                     guard let response = $0.response else { return }

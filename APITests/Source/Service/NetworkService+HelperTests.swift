@@ -19,13 +19,13 @@ final class NetworkService_HelperTests: XCTestCase {
         let urlRequest = try networkService.createRequest(MockTarget())
         XCTAssertEqual(urlRequest.url?.absoluteString, "https://yukimaterrace.com/api/login")
     }
-    
+
     func testCreateResponse() throws {
         let data = "{\"xxx\": \"abc\"}".data(using: .utf8)
         let response = try networkService.createResponse(MockTarget(), data: data!)
         XCTAssertEqual(response.xxx, "abc")
     }
-    
+
     func testThrowNetworkError() {
         let data = "{\"error\": \"unauthorized\", \"exception\": \"exception raised\"}".data(using: .utf8)!
         do {
