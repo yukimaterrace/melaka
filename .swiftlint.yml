@@ -1,3 +1,7 @@
 included:
   - Melaka
   - MelakaTests
+  - Domain
+  - DomainTests
+  - API
+  - APITests
