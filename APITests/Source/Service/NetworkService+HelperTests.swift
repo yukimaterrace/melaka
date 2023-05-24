@@ -8,7 +8,7 @@
 @testable import API
 import XCTest
 
-final class NetworkService_HelperTests: XCTestCase {
+final class NetworkServicePlusHelperTests: XCTestCase {
     var networkService: NetworkService!
 
     override func setUpWithError() throws {
