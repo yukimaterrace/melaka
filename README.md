@@ -5,4 +5,5 @@ iOS Application for Matching
 ```
 bundle install
 brew install swiftlint
+bundle exec fastlane set_environment
 ```
