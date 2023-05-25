@@ -16,8 +16,14 @@
 default_platform(:ios)
 
 platform :ios do
+  desc 'Set environment'
+  lane :set_environment do
+    set_info_plist_value(path: 'Domain/Environment.plist', key: 'api_base_url', value: ENV['API_BASE_URL'])
+  end
+
   desc 'Unit Tests'
   lane :tests do
+    set_environment
     scan(
       scheme: 'Melaka',
       device: 'iPhone 14',
@@ -43,6 +49,7 @@ platform :ios do
     )
     increment_build_number(build_number: build_number + 1)
 
+    set_environment
     build_app(
       scheme: 'Melaka',
       export_method: 'app-store'
