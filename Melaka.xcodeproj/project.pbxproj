@@ -7,8 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		6FF0F6322A14BC2100E41395 /* MelakaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FF0F6312A14BC2100E41395 /* MelakaApp.swift */; };
-		6FF0F6342A14BC2100E41395 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FF0F6332A14BC2100E41395 /* ContentView.swift */; };
+		6F3914422A1E050B0003A23D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FF0F6332A14BC2100E41395 /* ContentView.swift */; };
+		6F3914432A1E050B0003A23D /* MelakaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FF0F6312A14BC2100E41395 /* MelakaApp.swift */; };
+		6F3914442A1E050B0003A23D /* SomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD9DB2D2A15CC0A00770345 /* SomeModel.swift */; };
+		6F3914492A1E076C0003A23D /* DIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F3914482A1E076C0003A23D /* DIContainer.swift */; };
+		6F39144B2A1E086F0003A23D /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F39144A2A1E086F0003A23D /* Environment.swift */; };
+		6F39144D2A1E08C80003A23D /* Environment.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6F39144C2A1E08C80003A23D /* Environment.plist */; };
+		6F39144F2A1F1B7A0003A23D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F39144E2A1F1B7A0003A23D /* AppDelegate.swift */; };
+		6F6BDC082A1DDC4800799F63 /* LoginRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F6BDC072A1DDC4800799F63 /* LoginRequest.swift */; };
+		6F6BDC0A2A1DDCC300799F63 /* LoginResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F6BDC092A1DDCC300799F63 /* LoginResponse.swift */; };
+		6F6BDC0C2A1DDFA000799F63 /* LoginTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F6BDC0B2A1DDFA000799F63 /* LoginTarget.swift */; };
+		6F6BDC192A1E02A500799F63 /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = 6F6BDC182A1E02A500799F63 /* Swinject */; };
 		6FF0F6362A14BC2300E41395 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6FF0F6352A14BC2300E41395 /* Assets.xcassets */; };
 		6FF0F6392A14BC2300E41395 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6FF0F6382A14BC2300E41395 /* Preview Assets.xcassets */; };
 		6FF0F6432A14BC2300E41395 /* MelakaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FF0F6422A14BC2300E41395 /* MelakaTests.swift */; };
@@ -24,10 +33,8 @@
 		CBC050802A1DA48A00B736D1 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC0507B2A1DA48A00B736D1 /* NetworkError.swift */; };
 		CBC050862A1DA49500B736D1 /* MockTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC050832A1DA49500B736D1 /* MockTarget.swift */; };
 		CBC050872A1DA49500B736D1 /* NetworkService+HelperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC050852A1DA49500B736D1 /* NetworkService+HelperTests.swift */; };
-		CBD9DB2E2A15CC0A00770345 /* SomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD9DB2D2A15CC0A00770345 /* SomeModel.swift */; };
 		CBD9DB412A1AEF5000770345 /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBD9DB392A1AEF5000770345 /* Domain.framework */; };
 		CBD9DB482A1AEF5000770345 /* DomainTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD9DB472A1AEF5000770345 /* DomainTests.swift */; };
-		CBD9DB492A1AEF5000770345 /* Domain.h in Headers */ = {isa = PBXBuildFile; fileRef = CBD9DB3B2A1AEF5000770345 /* Domain.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CBD9DB4C2A1AEF5000770345 /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBD9DB392A1AEF5000770345 /* Domain.framework */; };
 		CBD9DB4D2A1AEF5000770345 /* Domain.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CBD9DB392A1AEF5000770345 /* Domain.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
@@ -100,6 +107,13 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		6F3914482A1E076C0003A23D /* DIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DIContainer.swift; sourceTree = "<group>"; };
+		6F39144A2A1E086F0003A23D /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
+		6F39144C2A1E08C80003A23D /* Environment.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Environment.plist; sourceTree = "<group>"; };
+		6F39144E2A1F1B7A0003A23D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		6F6BDC072A1DDC4800799F63 /* LoginRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRequest.swift; sourceTree = "<group>"; };
+		6F6BDC092A1DDCC300799F63 /* LoginResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponse.swift; sourceTree = "<group>"; };
+		6F6BDC0B2A1DDFA000799F63 /* LoginTarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginTarget.swift; sourceTree = "<group>"; };
 		6FF0F62E2A14BC2100E41395 /* Melaka.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Melaka.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6FF0F6312A14BC2100E41395 /* MelakaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MelakaApp.swift; sourceTree = "<group>"; };
 		6FF0F6332A14BC2100E41395 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -107,7 +121,7 @@
 		6FF0F6382A14BC2300E41395 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		6FF0F63E2A14BC2300E41395 /* MelakaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MelakaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6FF0F6422A14BC2300E41395 /* MelakaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MelakaTests.swift; sourceTree = "<group>"; };
-		6FF0F65B2A14C84C00E41395 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = ../../melaka/Melaka/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		6FF0F65B2A14C84C00E41395 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CBC050542A1DA40100B736D1 /* API.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = API.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBC0505B2A1DA40100B736D1 /* APITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = APITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBC050742A1DA48A00B736D1 /* TargetProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TargetProtocol.swift; sourceTree = "<group>"; };
@@ -119,7 +133,6 @@
 		CBC050852A1DA49500B736D1 /* NetworkService+HelperTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NetworkService+HelperTests.swift"; sourceTree = "<group>"; };
 		CBD9DB2D2A15CC0A00770345 /* SomeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SomeModel.swift; sourceTree = "<group>"; };
 		CBD9DB392A1AEF5000770345 /* Domain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Domain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		CBD9DB3B2A1AEF5000770345 /* Domain.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Domain.h; sourceTree = "<group>"; };
 		CBD9DB402A1AEF5000770345 /* DomainTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DomainTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBD9DB472A1AEF5000770345 /* DomainTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DomainTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -131,6 +144,7 @@
 			files = (
 				CBD9DB4C2A1AEF5000770345 /* Domain.framework in Frameworks */,
 				CBC050672A1DA40100B736D1 /* API.framework in Frameworks */,
+				6F6BDC192A1E02A500799F63 /* Swinject in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -175,6 +189,61 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6F3914472A1E07290003A23D /* DIContainer */ = {
+			isa = PBXGroup;
+			children = (
+				6F3914482A1E076C0003A23D /* DIContainer.swift */,
+			);
+			path = DIContainer;
+			sourceTree = "<group>";
+		};
+		6F6BDC0D2A1DE0CD00799F63 /* Request */ = {
+			isa = PBXGroup;
+			children = (
+				6F6BDC072A1DDC4800799F63 /* LoginRequest.swift */,
+			);
+			path = Request;
+			sourceTree = "<group>";
+		};
+		6F6BDC0E2A1DE0D500799F63 /* Response */ = {
+			isa = PBXGroup;
+			children = (
+				CBC050762A1DA48A00B736D1 /* ErrorResponse.swift */,
+				6F6BDC092A1DDCC300799F63 /* LoginResponse.swift */,
+			);
+			path = Response;
+			sourceTree = "<group>";
+		};
+		6F6BDC0F2A1DE5B300799F63 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				6F39144A2A1E086F0003A23D /* Environment.swift */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		6F6BDC1A2A1E02C200799F63 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				6FF0F65B2A14C84C00E41395 /* LaunchScreen.storyboard */,
+				6F39144E2A1F1B7A0003A23D /* AppDelegate.swift */,
+				6FF0F6332A14BC2100E41395 /* ContentView.swift */,
+				6FF0F6312A14BC2100E41395 /* MelakaApp.swift */,
+				CBD9DB2D2A15CC0A00770345 /* SomeModel.swift */,
+				6F3914472A1E07290003A23D /* DIContainer */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		6F6BDC1B2A1E035200799F63 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				6FF0F6352A14BC2300E41395 /* Assets.xcassets */,
+				6FF0F6372A14BC2300E41395 /* Preview Content */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
 		6FF0F6252A14BC2100E41395 = {
 			isa = PBXGroup;
 			children = (
@@ -204,12 +273,8 @@
 		6FF0F6302A14BC2100E41395 /* Melaka */ = {
 			isa = PBXGroup;
 			children = (
-				6FF0F65B2A14C84C00E41395 /* LaunchScreen.storyboard */,
-				6FF0F6332A14BC2100E41395 /* ContentView.swift */,
-				6FF0F6312A14BC2100E41395 /* MelakaApp.swift */,
-				CBD9DB2D2A15CC0A00770345 /* SomeModel.swift */,
-				6FF0F6352A14BC2300E41395 /* Assets.xcassets */,
-				6FF0F6372A14BC2300E41395 /* Preview Content */,
+				6F6BDC1B2A1E035200799F63 /* Resource */,
+				6F6BDC1A2A1E02C200799F63 /* Source */,
 			);
 			path = Melaka;
 			sourceTree = "<group>";
@@ -260,6 +325,7 @@
 		CBC050732A1DA48A00B736D1 /* Target */ = {
 			isa = PBXGroup;
 			children = (
+				6F6BDC0B2A1DDFA000799F63 /* LoginTarget.swift */,
 				CBC050742A1DA48A00B736D1 /* TargetProtocol.swift */,
 			);
 			path = Target;
@@ -268,7 +334,8 @@
 		CBC050752A1DA48A00B736D1 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				CBC050762A1DA48A00B736D1 /* ErrorResponse.swift */,
+				6F6BDC0E2A1DE0D500799F63 /* Response */,
+				6F6BDC0D2A1DE0CD00799F63 /* Request */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -318,7 +385,8 @@
 		CBD9DB3A2A1AEF5000770345 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
-				CBD9DB3B2A1AEF5000770345 /* Domain.h */,
+				6F6BDC0F2A1DE5B300799F63 /* Source */,
+				6F39144C2A1E08C80003A23D /* Environment.plist */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -345,7 +413,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CBD9DB492A1AEF5000770345 /* Domain.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -370,6 +437,7 @@
 			);
 			name = Melaka;
 			packageProductDependencies = (
+				6F6BDC182A1E02A500799F63 /* Swinject */,
 			);
 			productName = Melaka;
 			productReference = 6FF0F62E2A14BC2100E41395 /* Melaka.app */;
@@ -495,6 +563,7 @@
 					};
 					CBD9DB382A1AEF5000770345 = {
 						CreatedOnToolsVersion = 14.3;
+						LastSwiftMigration = 1430;
 					};
 					CBD9DB3F2A1AEF5000770345 = {
 						CreatedOnToolsVersion = 14.3;
@@ -512,6 +581,7 @@
 			mainGroup = 6FF0F6252A14BC2100E41395;
 			packageReferences = (
 				CBD9DB312A1AED4900770345 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				6F6BDC172A1E02A500799F63 /* XCRemoteSwiftPackageReference "Swinject" */,
 			);
 			productRefGroup = 6FF0F62F2A14BC2100E41395 /* Products */;
 			projectDirPath = "";
@@ -563,6 +633,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6F39144D2A1E08C80003A23D /* Environment.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -593,7 +664,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nif [[ \"$(uname -m)\" == arm64 ]]; then\n    export PATH=\"/opt/homebrew/bin:$PATH\"\nfi\n\nif which swiftlint > /dev/null; then\n  swiftlint --fix && swiftlint\nelse\n  echo \"warning: SwiftLint not installed\"\nfi\n";
+			shellScript = "if [[ \"$(uname -m)\" == arm64 ]]; then\n    export PATH=\"/opt/homebrew/bin:$PATH\"\nfi\n\nif which swiftlint > /dev/null; then\n  swiftlint --fix && swiftlint\nelse\n  echo \"warning: SwiftLint not installed\"\nfi\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -602,9 +673,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6FF0F6342A14BC2100E41395 /* ContentView.swift in Sources */,
-				CBD9DB2E2A15CC0A00770345 /* SomeModel.swift in Sources */,
-				6FF0F6322A14BC2100E41395 /* MelakaApp.swift in Sources */,
+				6F3914492A1E076C0003A23D /* DIContainer.swift in Sources */,
+				6F3914422A1E050B0003A23D /* ContentView.swift in Sources */,
+				6F3914432A1E050B0003A23D /* MelakaApp.swift in Sources */,
+				6F39144F2A1F1B7A0003A23D /* AppDelegate.swift in Sources */,
+				6F3914442A1E050B0003A23D /* SomeModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -623,8 +696,11 @@
 				CBC0507F2A1DA48A00B736D1 /* NetworkService+Helper.swift in Sources */,
 				CBC0507C2A1DA48A00B736D1 /* TargetProtocol.swift in Sources */,
 				CBC0507E2A1DA48A00B736D1 /* NetworkService.swift in Sources */,
+				6F6BDC082A1DDC4800799F63 /* LoginRequest.swift in Sources */,
+				6F6BDC0C2A1DDFA000799F63 /* LoginTarget.swift in Sources */,
 				CBC0507D2A1DA48A00B736D1 /* ErrorResponse.swift in Sources */,
 				CBC050802A1DA48A00B736D1 /* NetworkError.swift in Sources */,
+				6F6BDC0A2A1DDCC300799F63 /* LoginResponse.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -641,6 +717,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6F39144B2A1E086F0003A23D /* Environment.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -816,7 +893,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Melaka/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "Melaka/Resource/Preview\\ Content";
 				DEVELOPMENT_TEAM = 7SCK3YMYAS;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -853,7 +930,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Melaka/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "Melaka/Resource/Preview\\ Content";
 				DEVELOPMENT_TEAM = 7SCK3YMYAS;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -1052,6 +1129,7 @@
 		CBD9DB4F2A1AEF5000770345 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
@@ -1083,6 +1161,7 @@
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -1093,6 +1172,7 @@
 		CBD9DB502A1AEF5000770345 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
@@ -1244,6 +1324,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		6F6BDC172A1E02A500799F63 /* XCRemoteSwiftPackageReference "Swinject" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Swinject/Swinject.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.8.0;
+			};
+		};
 		CBD9DB312A1AED4900770345 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
@@ -1255,6 +1343,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		6F6BDC182A1E02A500799F63 /* Swinject */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6F6BDC172A1E02A500799F63 /* XCRemoteSwiftPackageReference "Swinject" */;
+			productName = Swinject;
+		};
 		CBC050702A1DA41200B736D1 /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = CBD9DB312A1AED4900770345 /* XCRemoteSwiftPackageReference "Alamofire" */;
