@@ -38,4 +38,5 @@ jobs:
           ASC_KEY_ID: ${{ secrets.ASC_KEY_ID }}
           ASC_ISSUER_ID: ${{ secrets.ASC_ISSUER_ID }}
           ASC_API_KEY: ${{ secrets.ASC_API_KEY }}
+          API_BASE_URL: ${{ vars.API_BASE_URL }}
         run: bundle exec fastlane deploy_to_test_flight
