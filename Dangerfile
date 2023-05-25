@@ -3,6 +3,9 @@ def run_slather
     ignore_list: [
       '**/*Tests.swift',
       '**/*View.swift',
+      '**/AppDelegate.swift',
+      '**/DIContainer.swift',
+      '**/Environment.swift',
       '**/NetworkService.swift'
     ],
     decimals: 2
