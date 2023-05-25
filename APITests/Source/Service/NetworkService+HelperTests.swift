@@ -30,10 +30,10 @@ final class NetworkServicePlusHelperTests: XCTestCase {
         let data = "{\"error\": \"unauthorized\", \"exception\": \"exception raised\"}".data(using: .utf8)!
         do {
             try networkService.throwNetworkError(statusCode: 404, data: data)
-            XCTFail()
+            XCTFail("should not be reached")
         } catch {
             guard let error = error as? NetworkError else {
-                XCTFail()
+                XCTFail("should not be reached")
                 return
             }
             XCTAssertEqual(error.statusCode, 404)
