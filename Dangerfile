@@ -1,11 +1,14 @@
 def run_slather
   slather.configure('Melaka.xcodeproj', 'Melaka', options: {
     ignore_list: [
+      '../**',
       '**/*Tests.swift',
+      '**/Mock*.swift',
       '**/*View.swift',
       '**/AppDelegate.swift',
       '**/DIContainer.swift',
-      '**/Environment.swift',
+      '**/Font+Custom.swift',
+      '**/EnvironmentService.swift',
       '**/NetworkService.swift'
     ],
     decimals: 2

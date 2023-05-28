@@ -11,8 +11,6 @@
 		6F3914432A1E050B0003A23D /* MelakaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FF0F6312A14BC2100E41395 /* MelakaApp.swift */; };
 		6F3914442A1E050B0003A23D /* SomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD9DB2D2A15CC0A00770345 /* SomeModel.swift */; };
 		6F3914492A1E076C0003A23D /* DIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F3914482A1E076C0003A23D /* DIContainer.swift */; };
-		6F39144B2A1E086F0003A23D /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F39144A2A1E086F0003A23D /* Environment.swift */; };
-		6F39144D2A1E08C80003A23D /* Environment.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6F39144C2A1E08C80003A23D /* Environment.plist */; };
 		6F39144F2A1F1B7A0003A23D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F39144E2A1F1B7A0003A23D /* AppDelegate.swift */; };
 		6F6BDC082A1DDC4800799F63 /* LoginRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F6BDC072A1DDC4800799F63 /* LoginRequest.swift */; };
 		6F6BDC0A2A1DDCC300799F63 /* LoginResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F6BDC092A1DDCC300799F63 /* LoginResponse.swift */; };
@@ -22,6 +20,14 @@
 		6FF0F6392A14BC2300E41395 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6FF0F6382A14BC2300E41395 /* Preview Assets.xcassets */; };
 		6FF0F6432A14BC2300E41395 /* MelakaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FF0F6422A14BC2300E41395 /* MelakaTests.swift */; };
 		6FF0F65C2A14C84C00E41395 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6FF0F65B2A14C84C00E41395 /* LaunchScreen.storyboard */; };
+		CBA672932A21A9AE005AFC1E /* RswiftLibrary in Frameworks */ = {isa = PBXBuildFile; productRef = CBA672922A21A9AE005AFC1E /* RswiftLibrary */; };
+		CBA672AF2A2306B5005AFC1E /* EnvironmentServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBA672AE2A2306B5005AFC1E /* EnvironmentServiceProtocol.swift */; };
+		CBA672B42A230793005AFC1E /* Environment.plist in Resources */ = {isa = PBXBuildFile; fileRef = CBA672B32A230793005AFC1E /* Environment.plist */; };
+		CBA672B72A2307BE005AFC1E /* EnvironmentService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBA672B62A2307BE005AFC1E /* EnvironmentService.swift */; };
+		CBA672BD2A23192A005AFC1E /* Font Awesome 6 Free-Regular-400.otf in Resources */ = {isa = PBXBuildFile; fileRef = CBA672BA2A23192A005AFC1E /* Font Awesome 6 Free-Regular-400.otf */; };
+		CBA672BE2A23192A005AFC1E /* Font Awesome 6 Free-Solid-900.otf in Resources */ = {isa = PBXBuildFile; fileRef = CBA672BB2A23192A005AFC1E /* Font Awesome 6 Free-Solid-900.otf */; };
+		CBA672BF2A23192A005AFC1E /* Font Awesome 6 Brands-Regular-400.otf in Resources */ = {isa = PBXBuildFile; fileRef = CBA672BC2A23192A005AFC1E /* Font Awesome 6 Brands-Regular-400.otf */; };
+		CBA672CA2A2321C4005AFC1E /* Font+Custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBA672C92A2321C4005AFC1E /* Font+Custom.swift */; };
 		CBC0505C2A1DA40100B736D1 /* API.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBC050542A1DA40100B736D1 /* API.framework */; };
 		CBC050672A1DA40100B736D1 /* API.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBC050542A1DA40100B736D1 /* API.framework */; };
 		CBC050682A1DA40100B736D1 /* API.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CBC050542A1DA40100B736D1 /* API.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -37,6 +43,7 @@
 		CBD9DB482A1AEF5000770345 /* DomainTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD9DB472A1AEF5000770345 /* DomainTests.swift */; };
 		CBD9DB4C2A1AEF5000770345 /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBD9DB392A1AEF5000770345 /* Domain.framework */; };
 		CBD9DB4D2A1AEF5000770345 /* Domain.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CBD9DB392A1AEF5000770345 /* Domain.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		CBDAE4042A2022710026BDE4 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = CBDAE4062A2022710026BDE4 /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -108,8 +115,6 @@
 
 /* Begin PBXFileReference section */
 		6F3914482A1E076C0003A23D /* DIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DIContainer.swift; sourceTree = "<group>"; };
-		6F39144A2A1E086F0003A23D /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
-		6F39144C2A1E08C80003A23D /* Environment.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Environment.plist; sourceTree = "<group>"; };
 		6F39144E2A1F1B7A0003A23D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6F6BDC072A1DDC4800799F63 /* LoginRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRequest.swift; sourceTree = "<group>"; };
 		6F6BDC092A1DDCC300799F63 /* LoginResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponse.swift; sourceTree = "<group>"; };
@@ -122,6 +127,14 @@
 		6FF0F63E2A14BC2300E41395 /* MelakaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MelakaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6FF0F6422A14BC2300E41395 /* MelakaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MelakaTests.swift; sourceTree = "<group>"; };
 		6FF0F65B2A14C84C00E41395 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		CBA672A52A230112005AFC1E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CBA672AE2A2306B5005AFC1E /* EnvironmentServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvironmentServiceProtocol.swift; sourceTree = "<group>"; };
+		CBA672B32A230793005AFC1E /* Environment.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Environment.plist; sourceTree = "<group>"; };
+		CBA672B62A2307BE005AFC1E /* EnvironmentService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvironmentService.swift; sourceTree = "<group>"; };
+		CBA672BA2A23192A005AFC1E /* Font Awesome 6 Free-Regular-400.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Font Awesome 6 Free-Regular-400.otf"; sourceTree = "<group>"; };
+		CBA672BB2A23192A005AFC1E /* Font Awesome 6 Free-Solid-900.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Font Awesome 6 Free-Solid-900.otf"; sourceTree = "<group>"; };
+		CBA672BC2A23192A005AFC1E /* Font Awesome 6 Brands-Regular-400.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Font Awesome 6 Brands-Regular-400.otf"; sourceTree = "<group>"; };
+		CBA672C92A2321C4005AFC1E /* Font+Custom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Font+Custom.swift"; sourceTree = "<group>"; };
 		CBC050542A1DA40100B736D1 /* API.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = API.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBC0505B2A1DA40100B736D1 /* APITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = APITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBC050742A1DA48A00B736D1 /* TargetProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TargetProtocol.swift; sourceTree = "<group>"; };
@@ -135,6 +148,7 @@
 		CBD9DB392A1AEF5000770345 /* Domain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Domain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBD9DB402A1AEF5000770345 /* DomainTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DomainTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBD9DB472A1AEF5000770345 /* DomainTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DomainTests.swift; sourceTree = "<group>"; };
+		CBDAE4052A2022710026BDE4 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,6 +157,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CBD9DB4C2A1AEF5000770345 /* Domain.framework in Frameworks */,
+				CBA672932A21A9AE005AFC1E /* RswiftLibrary in Frameworks */,
 				CBC050672A1DA40100B736D1 /* API.framework in Frameworks */,
 				6F6BDC192A1E02A500799F63 /* Swinject in Frameworks */,
 			);
@@ -217,7 +232,7 @@
 		6F6BDC0F2A1DE5B300799F63 /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				6F39144A2A1E086F0003A23D /* Environment.swift */,
+				CBA672AD2A23063B005AFC1E /* Service */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -225,6 +240,8 @@
 		6F6BDC1A2A1E02C200799F63 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				CBA672C82A2321B3005AFC1E /* Util */,
+				CBA672B52A2307AC005AFC1E /* Service */,
 				6FF0F65B2A14C84C00E41395 /* LaunchScreen.storyboard */,
 				6F39144E2A1F1B7A0003A23D /* AppDelegate.swift */,
 				6FF0F6332A14BC2100E41395 /* ContentView.swift */,
@@ -238,7 +255,10 @@
 		6F6BDC1B2A1E035200799F63 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				CBA672B32A230793005AFC1E /* Environment.plist */,
+				CBA6729E2A23000C005AFC1E /* Font */,
 				6FF0F6352A14BC2300E41395 /* Assets.xcassets */,
+				CBDAE4062A2022710026BDE4 /* Localizable.strings */,
 				6FF0F6372A14BC2300E41395 /* Preview Content */,
 			);
 			path = Resource;
@@ -273,6 +293,7 @@
 		6FF0F6302A14BC2100E41395 /* Melaka */ = {
 			isa = PBXGroup;
 			children = (
+				CBA672A52A230112005AFC1E /* Info.plist */,
 				6F6BDC1B2A1E035200799F63 /* Resource */,
 				6F6BDC1A2A1E02C200799F63 /* Source */,
 			);
@@ -293,6 +314,40 @@
 				6FF0F6422A14BC2300E41395 /* MelakaTests.swift */,
 			);
 			path = MelakaTests;
+			sourceTree = "<group>";
+		};
+		CBA6729E2A23000C005AFC1E /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				CBA672BC2A23192A005AFC1E /* Font Awesome 6 Brands-Regular-400.otf */,
+				CBA672BA2A23192A005AFC1E /* Font Awesome 6 Free-Regular-400.otf */,
+				CBA672BB2A23192A005AFC1E /* Font Awesome 6 Free-Solid-900.otf */,
+			);
+			path = Font;
+			sourceTree = "<group>";
+		};
+		CBA672AD2A23063B005AFC1E /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				CBA672AE2A2306B5005AFC1E /* EnvironmentServiceProtocol.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		CBA672B52A2307AC005AFC1E /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				CBA672B62A2307BE005AFC1E /* EnvironmentService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		CBA672C82A2321B3005AFC1E /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				CBA672C92A2321C4005AFC1E /* Font+Custom.swift */,
+			);
+			path = Util;
 			sourceTree = "<group>";
 		};
 		CBC050552A1DA40100B736D1 /* API */ = {
@@ -386,7 +441,6 @@
 			isa = PBXGroup;
 			children = (
 				6F6BDC0F2A1DE5B300799F63 /* Source */,
-				6F39144C2A1E08C80003A23D /* Environment.plist */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -432,12 +486,14 @@
 			buildRules = (
 			);
 			dependencies = (
+				CBA672952A21A9D1005AFC1E /* PBXTargetDependency */,
 				CBD9DB4B2A1AEF5000770345 /* PBXTargetDependency */,
 				CBC050662A1DA40100B736D1 /* PBXTargetDependency */,
 			);
 			name = Melaka;
 			packageProductDependencies = (
 				6F6BDC182A1E02A500799F63 /* Swinject */,
+				CBA672922A21A9AE005AFC1E /* RswiftLibrary */,
 			);
 			productName = Melaka;
 			productReference = 6FF0F62E2A14BC2100E41395 /* Melaka.app */;
@@ -572,16 +628,16 @@
 			};
 			buildConfigurationList = 6FF0F6292A14BC2100E41395 /* Build configuration list for PBXProject "Melaka" */;
 			compatibilityVersion = "Xcode 14.0";
-			developmentRegion = en;
+			developmentRegion = ja;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				en,
-				Base,
+				ja,
 			);
 			mainGroup = 6FF0F6252A14BC2100E41395;
 			packageReferences = (
 				CBD9DB312A1AED4900770345 /* XCRemoteSwiftPackageReference "Alamofire" */,
 				6F6BDC172A1E02A500799F63 /* XCRemoteSwiftPackageReference "Swinject" */,
+				CBDAE4202A2197250026BDE4 /* XCRemoteSwiftPackageReference "R" */,
 			);
 			productRefGroup = 6FF0F62F2A14BC2100E41395 /* Products */;
 			projectDirPath = "";
@@ -602,7 +658,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CBA672BD2A23192A005AFC1E /* Font Awesome 6 Free-Regular-400.otf in Resources */,
+				CBA672B42A230793005AFC1E /* Environment.plist in Resources */,
 				6FF0F65C2A14C84C00E41395 /* LaunchScreen.storyboard in Resources */,
+				CBA672BE2A23192A005AFC1E /* Font Awesome 6 Free-Solid-900.otf in Resources */,
+				CBA672BF2A23192A005AFC1E /* Font Awesome 6 Brands-Regular-400.otf in Resources */,
+				CBDAE4042A2022710026BDE4 /* Localizable.strings in Resources */,
 				6FF0F6392A14BC2300E41395 /* Preview Assets.xcassets in Resources */,
 				6FF0F6362A14BC2300E41395 /* Assets.xcassets in Resources */,
 			);
@@ -633,7 +694,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6F39144D2A1E08C80003A23D /* Environment.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -673,7 +733,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CBA672CA2A2321C4005AFC1E /* Font+Custom.swift in Sources */,
 				6F3914492A1E076C0003A23D /* DIContainer.swift in Sources */,
+				CBA672B72A2307BE005AFC1E /* EnvironmentService.swift in Sources */,
 				6F3914422A1E050B0003A23D /* ContentView.swift in Sources */,
 				6F3914432A1E050B0003A23D /* MelakaApp.swift in Sources */,
 				6F39144F2A1F1B7A0003A23D /* AppDelegate.swift in Sources */,
@@ -717,7 +779,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6F39144B2A1E086F0003A23D /* Environment.swift in Sources */,
+				CBA672AF2A2306B5005AFC1E /* EnvironmentServiceProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -736,6 +798,10 @@
 			isa = PBXTargetDependency;
 			target = 6FF0F62D2A14BC2100E41395 /* Melaka */;
 			targetProxy = 6FF0F63F2A14BC2300E41395 /* PBXContainerItemProxy */;
+		};
+		CBA672952A21A9D1005AFC1E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			productRef = CBA672942A21A9D1005AFC1E /* RswiftGenerateInternalResources */;
 		};
 		CBC0505E2A1DA40100B736D1 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -768,6 +834,17 @@
 			targetProxy = CBD9DB4A2A1AEF5000770345 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		CBDAE4062A2022710026BDE4 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CBDAE4052A2022710026BDE4 /* ja */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		6FF0F6502A14BC2300E41395 /* Debug */ = {
@@ -897,6 +974,7 @@
 				DEVELOPMENT_TEAM = 7SCK3YMYAS;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Melaka/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -934,6 +1012,7 @@
 				DEVELOPMENT_TEAM = 7SCK3YMYAS;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Melaka/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -1340,6 +1419,14 @@
 				minimumVersion = 5.7.0;
 			};
 		};
+		CBDAE4202A2197250026BDE4 /* XCRemoteSwiftPackageReference "R" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/mac-cain13/R.swift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.3.2;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -1347,6 +1434,15 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 6F6BDC172A1E02A500799F63 /* XCRemoteSwiftPackageReference "Swinject" */;
 			productName = Swinject;
+		};
+		CBA672922A21A9AE005AFC1E /* RswiftLibrary */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CBDAE4202A2197250026BDE4 /* XCRemoteSwiftPackageReference "R" */;
+			productName = RswiftLibrary;
+		};
+		CBA672942A21A9D1005AFC1E /* RswiftGenerateInternalResources */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = "plugin:RswiftGenerateInternalResources";
 		};
 		CBC050702A1DA41200B736D1 /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;

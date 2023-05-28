@@ -14,12 +14,20 @@ class DIContainer {
     static let instance = Container()
 
     static func initialize() {
+        initializeEnvironmentService()
         initializeNetworkService()
     }
 
+    private static func initializeEnvironmentService() {
+        instance.register(EnvironmentServiceProtocol.self) { _ in
+            EnvironmentService()
+        }.inObjectScope(.container)
+    }
+
     private static func initializeNetworkService() {
-        instance.register(NetworkServiceProtocol.self) { _ in
-            NetworkService(baseUrl: Environment.apiBaseUrl)
+        instance.register(NetworkServiceProtocol.self) {
+            let environment = $0.resolve(EnvironmentServiceProtocol.self)!
+            return NetworkService(baseUrl: environment.apiBaseUrl)
         }.inObjectScope(.container)
     }
 }

@@ -18,7 +18,7 @@ default_platform(:ios)
 platform :ios do
   desc 'Set environment'
   lane :set_environment do
-    set_info_plist_value(path: 'Domain/Environment.plist', key: 'api_base_url', value: ENV['API_BASE_URL'])
+    set_info_plist_value(path: 'Melaka/Resource/Environment.plist', key: 'api_base_url', value: ENV['API_BASE_URL'])
   end
 
   desc 'Unit Tests'
@@ -28,7 +28,8 @@ platform :ios do
       scheme: 'Melaka',
       device: 'iPhone 14',
       code_coverage: true,
-      parallel_testing: false
+      parallel_testing: false,
+      xcargs: '-skipPackagePluginValidation'
     )
   end
 
@@ -52,7 +53,8 @@ platform :ios do
     set_environment
     build_app(
       scheme: 'Melaka',
-      export_method: 'app-store'
+      export_method: 'app-store',
+      xcargs: '-skipPackagePluginValidation'
     )
 
     upload_to_testflight(api_key: api_key)
