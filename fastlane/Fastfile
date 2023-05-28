@@ -28,7 +28,8 @@ platform :ios do
       scheme: 'Melaka',
       device: 'iPhone 14',
       code_coverage: true,
-      parallel_testing: false
+      parallel_testing: false,
+      xcargs: '-skipPackagePluginValidation'
     )
   end
 
@@ -52,7 +53,8 @@ platform :ios do
     set_environment
     build_app(
       scheme: 'Melaka',
-      export_method: 'app-store'
+      export_method: 'app-store',
+      xcargs: '-skipPackagePluginValidation'
     )
 
     upload_to_testflight(api_key: api_key)
