@@ -21,4 +21,9 @@ public struct LoginResponse: Codable {
         self.token = try container.decode(String.self, forKey: .token)
         self.userId = try container.decode(Int.self, forKey: .userId)
     }
+
+    public init(token: String, userId: Int) {
+        self.token = token
+        self.userId = userId
+    }
 }

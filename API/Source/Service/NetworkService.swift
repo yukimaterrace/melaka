@@ -29,12 +29,12 @@ public class NetworkService: NetworkServiceProtocol {
                 return
             }
 
-            AF.request(urlRequest).responseData {
+            AF.request(urlRequest).response {
                 switch $0.result {
                 case .success(let data):
                     guard let response = $0.response else { return }
                     do {
-                        if response.statusCode == 200 {
+                        if let data, response.statusCode == 200 {
                             continuation.resume(returning: try self.createResponse(target, data: data))
                         } else {
                             try self.throwNetworkError(statusCode: response.statusCode, data: data)
@@ -47,5 +47,14 @@ public class NetworkService: NetworkServiceProtocol {
                 }
             }
         }
+    }
+}
+
+public class StubNetworkService: NetworkServiceProtocol {
+
+    public init() {}
+
+    public func request<T>(target: T) async throws -> T.Response where T: TargetProtocol {
+        target.sampleResponse
     }
 }
