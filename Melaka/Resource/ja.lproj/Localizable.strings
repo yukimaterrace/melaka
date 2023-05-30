@@ -6,5 +6,12 @@
   
 */
 
+"app.title"="Melaka";
+
+"alert.network.title"="通信エラーが発生しました";
+"alert.general.title"="エラーが発生しました";
+"alert.button.close"="閉じる";
+
 "login.email"="メールアドレス";
 "login.password"="パスワード";
+"login.button.title"="ログイン";
