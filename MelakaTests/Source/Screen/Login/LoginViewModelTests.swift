@@ -6,6 +6,7 @@
 //
 
 @testable import Melaka
+import API
 import Combine
 import SwiftUI
 import XCTest
@@ -25,12 +26,20 @@ class LoginViewModelTests: XCTestCase {
             expLoggedIn.fulfill()
         }.store(in: &cancellables)
 
+        var count = 0
         viewModel.alertViewModel.$isError.sink { _ in
-            expLoginFailed.fulfill()
+            count += 1
+            if count == 2 {
+                expLoginFailed.fulfill()
+            }
         }.store(in: &cancellables)
 
         viewModel.login()
+
         interactor.error = MockError()
+        viewModel.login()
+
+        interactor.error = NetworkError(statusCode: 400, message: nil)
         viewModel.login()
 
         wait(for: [expLoggedIn, expLoginFailed], timeout: 1)
