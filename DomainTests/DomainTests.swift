@@ -10,4 +10,7 @@ import XCTest
 
 final class DomainTests: XCTestCase {
 
+    func test() {
+        XCTAssertTrue(true)
+    }
 }
