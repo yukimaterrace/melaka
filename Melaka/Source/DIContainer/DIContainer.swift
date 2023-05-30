@@ -15,12 +15,19 @@ class DIContainer {
 
     static func initialize() {
         initializeEnvironmentService()
+        initializeSessionState()
         initializeNetworkService()
     }
 
     private static func initializeEnvironmentService() {
         instance.register(EnvironmentServiceProtocol.self) { _ in
             EnvironmentService()
+        }.inObjectScope(.container)
+    }
+
+    private static func initializeSessionState() {
+        instance.register(SessionState.self) { _ in
+            SessionState()
         }.inObjectScope(.container)
     }
 
