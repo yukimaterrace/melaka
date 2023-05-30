@@ -5,6 +5,7 @@ def run_slather
       '**/*Tests.swift',
       '**/Mock*.swift',
       '**/*View.swift',
+      '**/View+*.swift',
       '**/AppDelegate.swift',
       '**/DIContainer.swift',
       '**/Font+Custom.swift',

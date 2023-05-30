@@ -13,7 +13,7 @@ struct MelakaApp: App {
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ViewFactory.createRoot()
         }
     }
 }

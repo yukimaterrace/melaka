@@ -16,6 +16,7 @@ extension NetworkService {
 
         var urlRequest = try URLRequest(url: url, method: target.method, headers: target.headers)
         urlRequest.httpBody = body
+        urlRequest.headers.update(.contentType("application/json"))
         return urlRequest
     }
 
@@ -37,8 +38,14 @@ extension NetworkService {
         return try JSONDecoder().decode(target.responseType, from: data)
     }
 
-    func throwNetworkError(statusCode: Int, data: Data) throws {
-        let errorResponse = try JSONDecoder().decode(ErrorResponse.self, from: data)
-        throw NetworkError(statusCode: statusCode, message: errorResponse.exception)
+    func throwNetworkError(statusCode: Int, data: Data?) throws {
+        let message: String
+        if let data {
+            let errorResponse = try JSONDecoder().decode(ErrorResponse.self, from: data)
+            message = errorResponse.exception
+        } else {
+            message = ""
+        }
+        throw NetworkError(statusCode: statusCode, message: message)
     }
 }

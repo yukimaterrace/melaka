@@ -30,4 +30,8 @@ class MockTarget: TargetProtocol {
     var requestBody: MockTargetRequestBody? = .init()
 
     var responseType: MockTargetResponse.Type = MockTargetResponse.self
+
+    var sampleResponse: MockTargetResponse {
+        .init(xxx: "xxx")
+    }
 }

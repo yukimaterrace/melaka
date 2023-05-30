@@ -24,6 +24,10 @@ public class LoginTarget: TargetProtocol {
 
     public var responseType: LoginResponse.Type = LoginResponse.self
 
+    public var sampleResponse: LoginResponse {
+        .init(token: "token", userId: 1)
+    }
+
     public init(requestBody: LoginRequest) {
         self.requestBody = requestBody
     }

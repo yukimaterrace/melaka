@@ -18,4 +18,5 @@ public protocol TargetProtocol {
     var headers: HTTPHeaders? { get }
     var requestBody: RequestBody? { get }
     var responseType: Response.Type { get }
+    var sampleResponse: Response { get }
 }
