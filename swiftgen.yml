@@ -1,0 +1,20 @@
+strings:
+  inputs: AppFeature/Sources/App/Resource/ja.lproj
+  outputs:
+    - templateName: structured-swift5
+      output: AppFeature/Sources/App/Resource/Generated/Strings+Generated.swift
+xcassets:
+  inputs: AppFeature/Sources/App/Resource/Assets.xcassets
+  outputs:
+    - templateName: swift5
+      output: AppFeature/Sources/App/Resource/Generated/Assets+Generated.swift
+fonts:
+  inputs: AppFeature/Sources/App/Resource/Font
+  outputs:
+    - templateName: swift5
+      output: AppFeature/Sources/App/Resource/Generated/Fonts+Generated.swift
+plist:
+  inputs: AppFeature/Sources/App/Resource/Environment.plist
+  outputs:
+    - templateName: runtime-swift5
+      output: AppFeature/Sources/App/Resource/Generated/Plist+Generated.swift
