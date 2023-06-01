@@ -1,17 +1,66 @@
-# This file contains the fastlane.tools configuration
-# You can find the documentation at https://docs.fastlane.tools
-#
-# For a list of all available actions, check out
-#
-#     https://docs.fastlane.tools/actions
-#
-# For a list of all available plugins, check out
-#
-#     https://docs.fastlane.tools/plugins/available-plugins
-#
+require 'json'
+require 'erb'
 
-# Uncomment the line if you want fastlane to automatically update itself
-# update_fastlane
+class Coverage
+  attr_accessor :covered_lines, :executable_lines
+
+  def initialize(covered_lines, executable_lines)
+    @covered_lines = covered_lines
+    @executable_lines = executable_lines
+  end
+
+  def coverage
+    (covered_lines.to_f / executable_lines) * 100
+  end
+end
+
+class FileCoverage < Coverage
+  attr_accessor :file_name
+
+  def initialize(file_name, covered_lines, executable_lines)
+    super(covered_lines, executable_lines)
+    @file_name = file_name
+  end
+end
+
+class TotalCoverage
+  attr_accessor :total_coverage, :file_coverages
+
+  def initialize(total_coverage, file_coverages)
+    @total_coverage = total_coverage
+    @file_coverages = file_coverages
+  end
+end
+
+def create_file_coverages(json_report, ignore_patterns)
+  report = JSON.parse(json_report)
+  report['targets'].map do |target|
+    target['files'].filter_map do |file|
+      name = file['name']
+      if ignore_patterns.all? { |pattern| pattern.match(name).nil? }
+        FileCoverage.new(name, file['coveredLines'], file['executableLines'])
+      else
+        nil
+      end
+    end
+  end.flatten
+end
+
+def create_total_coverages(file_coverages)
+  total_coverage = file_coverages.reduce(Coverage.new(0, 0)) { |acc, coverage|
+    acc.covered_lines += coverage.covered_lines
+    acc.executable_lines += coverage.executable_lines
+    acc
+  }
+  TotalCoverage.new(total_coverage, file_coverages)
+end
+
+def create_html_coverage_report(coverage)
+  template = ERB.new(File.read('coverage_report.html.erb'))
+  File.open('coverage_report.html', 'w') do |f|
+    f.puts template.result(binding)
+  end
+end
 
 default_platform(:ios)
 
@@ -25,11 +74,13 @@ platform :ios do
   lane :tests do
     set_environment
     scan(
-      scheme: 'Melaka',
+      package_path: 'AppFeature',
+      scheme: 'AppFeature',
       device: 'iPhone 14',
       code_coverage: true,
       parallel_testing: false,
-      xcargs: '-skipPackagePluginValidation'
+      result_bundle: true,
+      output_directory: Dir.pwd + "/test_output"
     )
   end
 
@@ -58,5 +109,32 @@ platform :ios do
     )
 
     upload_to_testflight(api_key: api_key)
+  end
+
+  desc 'Create coverage json report'
+  lane :create_coverage_json_report do
+    report = sh('xcrun xccov view --report test_output/AppFeature.xcresult --json')
+    report.sub(/.*?\n/, '')
+  end
+
+  desc 'Create coverage html report'
+  lane :create_coverage_html_report do
+    ignore_patterns = [
+      /.*Tests\.swift/,
+      /Mock.*\.swift/,
+      /.*View\.swift/,
+      /View\+.*\.swift/,
+      /.*\+Generated\.swift/,
+      /AppDelegate\.swift/,
+      /ViewFactory\.swift/,
+      /DIContainer\.swift/,
+      /Font\+Custom\.swift/,
+      /EnvironmentService\.swift/,
+      /NetworkService\.swift/
+    ]
+
+    file_coverages = create_file_coverages(create_coverage_json_report, ignore_patterns)
+    total_coverage = create_total_coverages(file_coverages)
+    create_html_coverage_report(total_coverage)
   end
 end
