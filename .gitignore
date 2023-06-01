@@ -81,7 +81,6 @@ fastlane/report.xml
 fastlane/Preview.html
 fastlane/screenshots/**/*.png
 fastlane/test_output
-fastlane/coverage_report.html
 
 # Code Injection
 #

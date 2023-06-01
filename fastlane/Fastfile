@@ -56,8 +56,8 @@ def create_total_coverages(file_coverages)
 end
 
 def create_html_coverage_report(coverage)
-  template = ERB.new(File.read('coverage_report.html.erb'))
-  File.open('coverage_report.html', 'w') do |f|
+  template = ERB.new(File.read('coverage_report.md.erb'))
+  File.open('test_output/coverage_report.md', 'w') do |f|
     f.puts template.result(binding)
   end
 end

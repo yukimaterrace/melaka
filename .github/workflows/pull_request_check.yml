@@ -31,9 +31,9 @@ jobs:
         run: bundle exec fastlane create_coverage_html_report
 
       - name: Upload coverage report
-        run: |
-          REPORT=$(cat fastlane/coverage_report.html)
-          gh pr comment -b $REPORT
+        run: gh pr comment ${{ github.event.pull_request.number }} -F ./fastlane/test_output/coverage_report.md
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Run Danger
         run: bundle exec danger --verbose=true
