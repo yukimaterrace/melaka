@@ -16,6 +16,11 @@ jobs:
         uses: ruby/setup-ruby@v1
         with:
           bundler-cache: true
+
+      - name: Generate resource accessor
+        run: |
+          brew install swiftgen
+          swiftgen
       
       - name: Run Unit tests
         run: bundle exec fastlane tests
