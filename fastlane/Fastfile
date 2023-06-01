@@ -18,7 +18,7 @@ default_platform(:ios)
 platform :ios do
   desc 'Set environment'
   lane :set_environment do
-    set_info_plist_value(path: 'Melaka/Resource/Environment.plist', key: 'api_base_url', value: ENV['API_BASE_URL'])
+    set_info_plist_value(path: 'AppFeature/Sources/App/Resource/Environment.plist', key: 'api_base_url', value: ENV['API_BASE_URL'])
   end
 
   desc 'Unit Tests'
