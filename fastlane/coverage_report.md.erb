@@ -1,0 +1,8 @@
+# Code Coverage Report
+
+## Total Coverage: <%= coverage.total_coverage.coverage.round(2) %> %
+
+| File | Coverage (%) |
+| ---- | ------------ |
+<% coverage.file_coverages.each do |coverage| %>| <%= coverage.file_name %> | <%= coverage.coverage.round(2) %> |
+<% end %>

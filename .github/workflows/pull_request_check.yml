@@ -16,11 +16,24 @@ jobs:
         uses: ruby/setup-ruby@v1
         with:
           bundler-cache: true
+
+      - name: Generate resources accessor
+        run: |
+          brew install swiftgen
+          swiftgen
       
       - name: Run Unit tests
         run: bundle exec fastlane tests
         env:
           API_BASE_URL: ${{ vars.API_BASE_URL }}
+
+      - name: Generate coverage report
+        run: bundle exec fastlane create_coverage_html_report
+
+      - name: Upload coverage report
+        run: gh pr comment ${{ github.event.pull_request.number }} -F ./fastlane/test_output/coverage_report.md
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Run Danger
         run: bundle exec danger --verbose=true
