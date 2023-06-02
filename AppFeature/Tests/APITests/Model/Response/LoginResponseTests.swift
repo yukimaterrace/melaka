@@ -14,7 +14,7 @@ class LoginResponseTests: XCTestCase {
         let json = """
         {
             "token": "token",
-            "userId": 1
+            "user_id": 1
         }
         """
         let data = json.data(using: .utf8)!
