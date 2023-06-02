@@ -86,26 +86,41 @@ platform :ios do
 
   desc 'Deploy to Test Flight'
   lane :deploy_to_test_flight do
+    xcodeproj = 'Melaka/Melaka.xcodeproj'
+
     api_key = app_store_connect_api_key(
       key_id: ENV['ASC_KEY_ID'],
       issuer_id: ENV['ASC_ISSUER_ID'],
       key_content: ENV['ASC_API_KEY']
     )
 
+    version = get_version_number(
+      xcodeproj: xcodeproj,
+      target: 'Melaka'
+    )
+
     build_number = app_store_build_number(
       api_key: api_key,
-      app_identifier: 'com.yukimaterrace.ios.melaka',
-      version: get_version_number(target: 'Melaka'),
+      app_identifier: 'com.yukimaterrace.cat.melaka',
+      version: version,
       initial_build_number: 0,
       live: false
     )
-    increment_build_number(build_number: build_number + 1)
+    increment_build_number(
+      xcodeproj: xcodeproj,
+      build_number: build_number + 1
+    )
 
     set_environment
     build_app(
+      workspace: 'Melaka.xcworkspace',
       scheme: 'Melaka',
       export_method: 'app-store',
-      xcargs: '-skipPackagePluginValidation'
+      export_options: {
+        provisioningProfiles: {
+          "com.yukimaterrace.cat.melaka" => "Melaka"
+        }
+      }
     )
 
     upload_to_testflight(api_key: api_key)
