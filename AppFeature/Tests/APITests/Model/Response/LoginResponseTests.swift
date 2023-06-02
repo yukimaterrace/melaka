@@ -9,7 +9,7 @@
 import XCTest
 
 class LoginResponseTests: XCTestCase {
-    
+
     func testDecodable() {
         let json = """
         {

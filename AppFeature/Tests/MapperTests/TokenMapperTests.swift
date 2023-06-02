@@ -11,11 +11,11 @@
 import XCTest
 
 class TokenMapperTests: XCTestCase {
-    
+
     func testMap() {
         let loginResponse = LoginResponse(token: "token", userId: 1)
         let token = TokenMapper.map(loginResponse)
-        
+
         XCTAssertEqual(token.token, "token")
         XCTAssertEqual(token.userId, 1)
     }

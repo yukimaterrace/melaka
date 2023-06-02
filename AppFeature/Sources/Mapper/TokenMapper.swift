@@ -9,7 +9,7 @@ import Domain
 import  API
 
 public class TokenMapper {
-    
+
     public static func map(_ loginResponse: LoginResponse) -> Token {
         return .init(token: loginResponse.token,
                      userId: loginResponse.userId)

@@ -49,13 +49,13 @@ let package = Package(
 
         .testTarget(name: "APITests",
                     dependencies: [.target(name: "API")]),
-        
+
         .target(name: "Mapper",
                 dependencies: [
                     .target(name: "Domain"),
                     .target(name: "API")
                 ]),
-        
+
         .testTarget(name: "MapperTests",
                     dependencies: [.target(name: "Mapper")])
     ]

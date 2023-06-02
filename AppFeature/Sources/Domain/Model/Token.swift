@@ -10,7 +10,7 @@ import Foundation
 public struct Token {
     public let token: String
     public let userId: Int
-    
+
     public init(token: String, userId: Int) {
         self.token = token
         self.userId = userId
