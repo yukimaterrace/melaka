@@ -6,11 +6,12 @@
 //
 
 import API
+import Domain
 import Foundation
 
 class MockLoginInteractor: LoginInteractorProtocol {
 
-    func login(email: String, password: String) async throws -> LoginResponse {
+    func login(email: String, password: String) async throws -> Token {
         .init(token: "", userId: 1)
     }
 }

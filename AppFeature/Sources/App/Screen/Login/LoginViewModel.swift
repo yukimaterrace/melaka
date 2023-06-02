@@ -31,8 +31,8 @@ class LoginViewModel: ObservableObject {
         isLoading = true
         Task { @MainActor in
             do {
-                let response = try await interactor.login(email: email, password: password)
-                sessionState.loggedIn(accessToken: response.token)
+                let token = try await interactor.login(email: email, password: password)
+                sessionState.loggedIn(accessToken: token.token)
             } catch {
                 alertViewModel.send(error: error)
             }
