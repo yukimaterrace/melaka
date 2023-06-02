@@ -10,7 +10,7 @@ import XCTest
 
 class LoginResponseTests: XCTestCase {
 
-    func testDecodable() {
+    func testDecodable() throws {
         let json = """
         {
             "token": "token",
@@ -18,7 +18,7 @@ class LoginResponseTests: XCTestCase {
         }
         """
         let data = json.data(using: .utf8)!
-        let response = try! JSONDecoder().decode(LoginResponse.self, from: data)
+        let response = try JSONDecoder().decode(LoginResponse.self, from: data)
         XCTAssertEqual(response.token, "token")
         XCTAssertEqual(response.userId, 1)
     }
