@@ -6,10 +6,11 @@
 //
 
 import API
+import Domain
 import Foundation
 
 protocol LoginInteractorProtocol {
-    func login(email: String, password: String) async throws -> LoginResponse
+    func login(email: String, password: String) async throws -> Token
 }
 
 class LoginInteractor: LoginInteractorProtocol {
@@ -19,8 +20,9 @@ class LoginInteractor: LoginInteractorProtocol {
         self.networkService = networkService
     }
 
-    func login(email: String, password: String) async throws -> LoginResponse {
+    func login(email: String, password: String) async throws -> Token {
         let target = LoginTarget(requestBody: .init(email: email, password: password))
-        return try await networkService.request(target: target)
+        let response = try await networkService.request(target: target)
+        return .init(token: response.token, userId: response.userId)
     }
 }

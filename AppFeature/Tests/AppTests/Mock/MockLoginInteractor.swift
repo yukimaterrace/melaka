@@ -7,12 +7,13 @@
 
 @testable import App
 import API
+import Domain
 import Foundation
 
 class MockLoginInteractor: LoginInteractorProtocol {
     var error: Error?
 
-    func login(email: String, password: String) async throws -> LoginResponse {
+    func login(email: String, password: String) async throws -> Token {
         if let error { throw error }
         return .init(token: "token", userId: 1)
     }
